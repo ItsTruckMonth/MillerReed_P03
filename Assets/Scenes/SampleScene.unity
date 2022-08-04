@@ -229,6 +229,7 @@ GameObject:
   - component: {fileID: 677179924}
   - component: {fileID: 677179923}
   - component: {fileID: 677179922}
+  - component: {fileID: 677179925}
   m_Layer: 5
   m_Name: TestButton
   m_TagString: Untagged
@@ -298,7 +299,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 677179923}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 677179925}
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &677179923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,6 +348,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 677179920}
   m_CullTransparentMesh: 0
+--- !u!114 &677179925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677179920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddf09e01c7a00543bcd91ddc39eb8d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: You're Mother
+    sentences:
+    - Hello, I am you're mother.
+    - Yes I used the wrong 'You're'.
+    - It's funny, I think.
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,6 +652,7 @@ GameObject:
   - component: {fileID: 1239356374}
   - component: {fileID: 1239356376}
   - component: {fileID: 1239356375}
+  - component: {fileID: 1239356377}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -688,6 +719,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1239356373}
   m_CullTransparentMesh: 0
+--- !u!95 &1239356377
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239356373}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3ec1580fbd5764748941a5d648671365, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1417203394
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,6 +781,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e00bfaf5bef66d44a8f9d789ba4b14b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameText: {fileID: 1491653782}
+  dialogueText: {fileID: 1998783439}
+  animator: {fileID: 1239356377}
 --- !u!1 &1440764036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,7 +1098,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1691044867}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1417203396}
+        m_MethodName: DisplayNextSentence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &1761482968
 CanvasRenderer:
   m_ObjectHideFlags: 0
