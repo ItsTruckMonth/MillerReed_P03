@@ -6,7 +6,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DialogueBox
+  m_Name: DialogueBox_OpenUp
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: IsOpen
@@ -64,7 +64,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1797417439694146466}
-    m_Position: {x: 270, y: -30, z: 0}
+    m_Position: {x: 260, y: -30, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3105289900765527121}
     m_Position: {x: 260, y: 110, z: 0}
